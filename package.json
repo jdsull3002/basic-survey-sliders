@@ -1,0 +1,26 @@
+{
+  "name": "fitworldservice",
+  "version": "1.0.0",
+  "scripts": {
+    "predefault": "npm install",
+    "default": "gulp default",
+    "serve": "python -m SimpleHTTPServer 8080"
+  },
+  "devDependencies": {
+    "handlebars": "^4.7.6",
+    "gulp": "^4.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1",
+    "gulp-handlebars": "^5.0.2",
+    "gulp-wrap": "^0.15.0",
+    "gulp-declare": "^0.3.0",
+    "gulp-concat": "^2.6.1"
+  },
+  "-vs-binding": {
+    "ProjectOpened": [
+      "install",
+      "default"
+    ]
+  }
+}

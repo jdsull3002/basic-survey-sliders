@@ -1,0 +1,24 @@
+{{#pain}}
+    <div class="pain-slider__wrapper">
+        {{#if placementBefore}}
+            <div class="pain-slider__ticks before">
+                {{#while sections 'before'}}{{/while}}
+            </div>
+            <div class="pain-slider__range-bar">
+                <hr/>
+            </div>
+        {{else}}
+            <div class="pain-slider__range-bar">
+                <hr>
+            </div>
+            <div class="pain-slider__ticks after">
+                {{#while sections 'after'}}{{/while}}
+            </div>
+        {{/if}}
+        <div class="pain-slider__labels">
+            <div>  {{minMessage}} </div>
+            <div>  {{medMessage}}  </div>
+            <div>  {{maxMessage}} </div>
+        </div>
+    </div>
+{{/pain}}

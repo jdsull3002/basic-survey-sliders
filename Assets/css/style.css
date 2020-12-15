@@ -1,0 +1,208 @@
+.hkscore-cont {
+  background-color: #E5EEF1;
+}
+
+.divsurvbg {
+  background-color: #E5EEF1;
+  vertical-align: top;
+}
+
+.divsurvnumber1, .divsurvnumber {
+  width: 35px;
+  font-family: NotoSans, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 19px;
+  text-align: right;
+}
+
+.divsurvnumber {
+  color: #007DC7;
+}
+
+.divsurvparasur {
+  color: #5F5F5F;
+  font-family: NotoSans, sans-serif;
+  font-size: 15px;
+}
+
+.divsurvtexthead {
+  height: 27px;
+  width: 60.6px;
+  color: #005B79;
+  font-family: NotoSans, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 27px;
+}
+
+.divsurvtext {
+  height: 19px;
+  width: 65px;
+  color: #5F5F5F;
+  font-family: NotoSans, sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 19px;
+}
+
+.divsurvtextsevere {
+  height: 19px;
+  width: 44px;
+  color: #007BBC;
+  font-family: NotoSans, sans-serif;
+  font-size: 15px;
+  line-height: 19px;
+  text-align: center;
+  padding-bottom: 23px;
+}
+
+.divsurvmdcolbor {
+  border-bottom: 2px solid #FFFFFF;
+  width: 111px;
+  position: absolute;
+  margin-left: -15px;
+  text-align: center;
+}
+
+.divsurvmiscolor {
+  height: 22px;
+  width: 47px;
+  color: #D7073D;
+  font-family: NotoSans, sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.divsurvmdcoltext {
+  color: #6D6D6D;
+  font-weight: normal;
+  text-align: center;
+  word-break: break-word;
+}
+
+.mymo-survey-num-color {
+  color: #007DC7;
+  font-weight: bold;
+}
+
+.mymo-survey-ques-litcolor {
+  color: #C2C2C2;
+  padding-left: 10px;
+  font-weight: normal;
+}
+
+.pain-slider__wrapper {
+  width: 80%;
+  font-style: italic;
+  color: #c2c2c2;
+  margin: 10px auto;
+}
+
+.pain-slider__range-bar {
+  height: 40px;
+  position: relative;
+  margin: 0 20px;
+  color: #c2c2c2;
+}
+
+.pain-slider__range-bar > hr {
+  position: relative;
+  top: 50%;
+  z-index: 10;
+  border: 1px solid #c2c2c2;
+}
+
+.pain-slider__range-bar::before, .pain-slider__range-bar::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 1px;
+  border-right: 2px solid #c2c2c2;
+  top: 0;
+  position: absolute;
+}
+
+.pain-slider__range-bar::before {
+  left: -1px;
+}
+
+.pain-slider__range-bar::after {
+  right: -2px;
+}
+
+.pain-slider__ticks .increment {
+  margin: 0 1px;
+}
+
+.pain-slider__ticks .vertical-line {
+  position: relative;
+  height: 40px;
+  width: 1px;
+  border-right: 2px solid #c2c2c2;
+  left: 50%;
+}
+
+.pain-slider__ticks, .pain-slider__labels {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.pain-slider__ticks > div, .pain-slider__labels > div {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.pain-slider__ticks > div:first-child, .pain-slider__labels > div:first-child {
+  justify-self: flex-start;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.pain-slider__ticks > div:last-child, .pain-slider__labels > div:last-child {
+  justify-self: flex-end;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.pain-slider__ticks.after {
+  margin-top: -40px;
+  position: relative;
+}
+
+.pain-slider__ticks.after > div {
+  text-align: right;
+  justify-self: flex-end;
+}
+
+.pain-slider__ticks.after .vertical-line {
+  left: 100%;
+}
+
+.pain-slider__ticks.after > div:last-child .vertical-line {
+  visibility: hidden;
+}
+
+.pain-slider__ticks.after > .increment:first-of-type:before {
+  content: "0";
+  position: absolute;
+  left: 15px;
+  bottom: -2px;
+}
+
+.pain-slider__ticks.before {
+  margin-bottom: -40px;
+}
+
+.pain-slider__ticks.before .vertical-line {
+  top: 8px;
+}
+
+.pain-slider__ticks.before > div:last-child {
+  justify-self: flex-start;
+}
+
+.pain-slider__ticks.before > div:first-child .vertical-line, .pain-slider__ticks.before > div:last-child .vertical-line {
+  display: none;
+}

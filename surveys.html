@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SliderNoIncrements</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/node_modules/handlebars/dist/handlebars.runtime.js"></script>
+    <script src="/Assets/js/templates.min.js"></script>
+    <link rel="stylesheet" href="/Assets/css/style.css">
+    <script>
+        Handlebars.registerHelper("while", function(j, b){
+            let stack = '',
+                index = 1,
+                count = (function(j) {
+                    if(typeof j === 'number') {
+                        let a = []
+                        //convert it into an array
+                        for(let i = 1; i <= j; i++){
+                            a.push(i);
+                        }
+                        return a;
+                    }
+                   return j;
+                }(j));
+            if(b === "before") {
+                count.forEach(function(index) {
+                    stack = stack + '<div class="increment">' + index +
+                        '<div class="vertical-line"></div></div>';
+                });
+            } else {
+                count.forEach(function(index) {
+                    stack = stack + '<div class="increment">' +
+                        '<div class="vertical-line"></div>' + index + '</div>';
+                });
+            }
+
+            return stack;
+        });
+    </script>
+</head>
+<body>
+    <div id="slider1"></div>
+    <div id="slider2"></div>
+    <div id="slider3"></div>
+
+    <script>
+        $(function(){
+           $('#slider1').append(myMob.templates.no_increments({
+               pain:{
+                   min: "it tickles",
+                   max: "THE PAIN!"
+               }
+           }));
+
+           $('#slider2').append(myMob.templates.increments({
+               pain:{
+                   minMessage: "it tickles",
+                   maxMessage: "THE PAIN!",
+                   medMessage: "yeah. I'd rather feel something else",
+                   sections: 10,
+                   placementBefore: false
+               }
+           }));
+
+            $('#slider3').append(myMob.templates.increments({
+                pain: {
+                    minMessage: "it tickles",
+                    maxMessage: "THE PAIN!",
+                    medMessage: "yeah. I'd rather feel something else",
+                    sections: [0, 50, 100],
+                    placementBefore: true
+                }
+            }));
+        });
+    </script>
+</body>
+</html>

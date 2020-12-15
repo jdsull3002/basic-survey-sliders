@@ -1,0 +1,126 @@
+﻿.pain-slider__wrapper {
+  width: 80%;
+  font-style: italic;
+  color: #c2c2c2;
+  margin: 10px auto;
+}
+
+.pain-slider__range-bar {
+  height: 40px;
+  position: relative;
+  margin: 0 20px;
+  color: #c2c2c2;
+
+  > hr {
+    position: relative;
+    top: 50%;
+    z-index: 10;
+    border: 1px solid #c2c2c2;
+  }
+
+  //the left and right caps
+  &::before, &::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 1px;
+    border-right: 2px solid #c2c2c2;
+    top: 0;
+    position: absolute;
+  }
+
+  &::before {
+    left: -1px;
+  }
+
+  &::after {
+    right: -2px;
+  }
+}
+.pain-slider__ticks{
+  .increment {
+    margin: 0 1px;
+  }
+
+  .vertical-line {
+    position: relative;
+    height: 40px;
+    width: 1px;
+    border-right: 2px solid #c2c2c2;
+    left: 50%;
+  }
+
+}
+
+.pain-slider__ticks, .pain-slider__labels {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+
+  //a general rule for the bars
+  > div {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  > div:first-child {
+    justify-self: flex-start;
+    text-align: left;
+    margin-left: 15px;
+  }
+
+  > div:last-child {
+    justify-self: flex-end;
+    text-align: right;
+    margin-right: 10px;
+  }
+}
+
+//the tick marks and increments are below the line
+.pain-slider__ticks.after {
+  margin-top: -40px;
+  position: relative;
+
+  > div {
+    text-align: right;
+    justify-self: flex-end;
+  }
+
+  .vertical-line {
+    left: 100%;
+  }
+
+  > div:last-child .vertical-line {
+    visibility: hidden;
+  }
+
+  > .increment:first-of-type {
+    //background-color: red;
+    &:before {
+      content: "0";
+      position: absolute;
+      left: 15px;
+      bottom: -2px;
+      //height: 20px;
+    }
+  }
+}
+
+//the tick marks and increments are above the line
+.pain-slider__ticks.before {
+  margin-bottom: -40px;
+
+  .vertical-line {
+    top: 8px;
+  }
+
+  > div:last-child {
+    justify-self: flex-start;
+  }
+
+  > div:first-child, > div:last-child {
+    .vertical-line {
+      display: none;
+    }
+  }
+}
